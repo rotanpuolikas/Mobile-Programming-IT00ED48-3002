@@ -19,7 +19,7 @@ const AddLocationScreen = () => {
       return
     }
 
-    if (rating < 1 || rating > 5) {
+    if (rating < 1 || rating > 5) { // temporary, will be changed to clickable stars
       Alert.alert("Error", "Rating must be between 1 and 5")
       return
     }
