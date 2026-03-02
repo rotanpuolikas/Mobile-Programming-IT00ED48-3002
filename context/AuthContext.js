@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }) => {
   const logout = async () => {
     await signOut(auth)
     await AsyncStorage.removeItem("user")
-    setUser(null)
+    setUser(null) //null user proved to cause problems sometimes, looking for a fix
   };
 
   return (
