@@ -1,17 +1,10 @@
 import { useState, useContext } from "react"
-import {
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  StyleSheet,
-  ActivityIndicator
-} from "react-native";
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, ActivityIndicator } from "react-native";
 import { AuthContext } from "../context/AuthContext"
 
 const LoginScreen = () => {
   const { login } = useContext(AuthContext)
-
+  
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [error, setError] = useState("")
@@ -23,7 +16,8 @@ const LoginScreen = () => {
 
     try {
       await login(email, password);
-    } catch (err) {
+    }
+    catch (err) {
       setError("Invalid email or password")
     }
 
