@@ -33,4 +33,25 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "600",
   },
+  card: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: colours.card,
+    padding: 12,
+    borderRadius: 12,
+    marginBottom: 10,
+  },
+  flag: {
+    width: 50,
+    height: 30,
+    marginRight: 15,
+  },
+  countryName: {
+    fontSize: 16,
+    color: colours.textPrimary,
+  },
+  error: {
+    color: colours.error,
+    marginBottom: 10,
+  },
 })
