@@ -1,14 +1,14 @@
 import { View, Text, StyleSheet } from "react-native"
 
-const AddLocationScreen = () => {
+const LocationListScreen = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Add Location Screen</Text>
+      <Text style={styles.text}>Location List Screen</Text>
     </View>
   )
 }
 
-export default AddLocationScreen
+export default LocationListScreen
 
 const styles = StyleSheet.create({
   container: {

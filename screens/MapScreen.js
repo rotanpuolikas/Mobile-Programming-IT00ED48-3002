@@ -1,0 +1,24 @@
+import { View, Text, StyleSheet } from "react-native"
+
+const MapScreen = () => {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.text}>Map Screen</Text>
+    </View>
+  )
+}
+
+export default MapScreen
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#F1FAEE",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  text: {
+    fontSize: 22,
+    color: "#1D3557",
+  },
+})
