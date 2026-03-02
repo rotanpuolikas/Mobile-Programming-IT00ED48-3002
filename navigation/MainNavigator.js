@@ -20,7 +20,7 @@ const MainNavigator = () => {
   const { logout, user } = useContext(AuthContext)
   
   return (
-    <Tab.Navigator
+    <Tab.Navigator // this looks terrible but i found this to look the best
       screenOptions={{
         headerRight: () => (
           <TouchableOpacity onPress={logout} style={{ marginRight: 15 }}>
