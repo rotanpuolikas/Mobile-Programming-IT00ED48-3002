@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native"
+import { View, Text, TextInput, TouchableOpacity, Alert, Keyboard } from "react-native"
 import { collection, addDoc, serverTimestamp } from "firebase/firestore"
 import { db } from "../firebase"
 import { AuthContext } from "../context/AuthContext"
@@ -14,6 +14,8 @@ const AddLocationScreen = () => {
   const [rating, setRating] = useState("")
 
   const handleAddLocation = async () => {
+    Keyboard.dismiss() // get that keyboard out of the way
+    
     if (!name || !description || !rating) {
       Alert.alert("Error", "Please fill all fields")
       return
