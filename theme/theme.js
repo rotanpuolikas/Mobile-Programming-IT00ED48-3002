@@ -3,6 +3,12 @@ import { colours } from "./colours.js"
 import { StyleSheet } from "react-native"
 
 export const styles = StyleSheet.create({
+  loginContainer: {
+    flex: 1,
+    backgroundColor: colours.background,
+    padding: 20,
+    justifyContent: "center",
+  },
   container: {
     flex: 1,
     backgroundColor: colours.background,
