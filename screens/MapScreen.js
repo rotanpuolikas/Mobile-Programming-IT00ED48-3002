@@ -6,10 +6,10 @@ import MapView, { Marker } from "react-native-maps"
 import { useRoute, useFocusEffect } from "@react-navigation/native"
 import AsyncStorage from "@react-native-async-storage/async-storage"
 
-const DEFAULT_LOCATION = {
+const DEFAULT_LOCATION = { // default to toripolliisi
   name: "Oulu",
-  latitude: 65.0124,
-  longitude: 25.4682,
+  latitude: 65.013307,
+  longitude: 25.464731,
 }
 
 const MapScreen = () => {
