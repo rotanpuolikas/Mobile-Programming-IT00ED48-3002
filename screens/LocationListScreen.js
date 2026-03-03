@@ -42,8 +42,8 @@ const LocationListScreen = () => {
 
     setLoading(false)
   }
-  // need to use this instead of normal useEffect for this to refresh correctly
-  useFocusEffect(
+  // changed again to use normal useEffect for automatic updates after entry removal
+  useEffect(
     React.useCallback(() => {
       fetchLocations()
     }, [])
