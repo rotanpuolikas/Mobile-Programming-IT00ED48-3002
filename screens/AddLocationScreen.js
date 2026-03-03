@@ -3,7 +3,7 @@ import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native"
 import { collection, addDoc, serverTimestamp } from "firebase/firestore"
 import { db } from "../firebase"
 import { AuthContext } from "../context/AuthContext"
-
+import { RatingStarsClickable } from "../components/RatingStars.js"
 import { styles } from '../theme/theme.js'
 
 const AddLocationScreen = () => {
@@ -69,15 +69,11 @@ const AddLocationScreen = () => {
         style={styles.input}
         multiline
       />
-
-      <TextInput
-        placeholder="Rating (1-5)"
-        value={rating}
-        onChangeText={setRating}
-        style={styles.input}
-        keyboardType="numeric"
-      />
-
+      <View style={styles.ratingBox}>
+      <Text>Rating</Text>
+      <RatingStarsClickable onChange={(value) => setRating(value)} />
+      </View>
+      
       <TouchableOpacity style={styles.button} onPress={handleAddLocation}>
         <Text style={styles.buttonText}>Save Location</Text>
       </TouchableOpacity>
