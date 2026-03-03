@@ -1,8 +1,10 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
-
+import Ionicons from "@expo/vector-icons/Ionicons"
 import { useContext } from "react"
 
 import { TouchableOpacity, Text } from "react-native"
+
+import { colours } from "../theme/colours.js"
 
 import { AuthContext } from "../context/AuthContext"
 
@@ -24,14 +26,27 @@ const MainNavigator = () => {
       screenOptions={{
         headerRight: () => (
           <TouchableOpacity onPress={logout} style={{ marginRight: 15 }}>
-            <Text style={{ color: "#E63946", fontWeight: "600" }}>
+            <Text style={{ color: colours.primary, fontWeight: "600" }}>
               Logout
             </Text>
           </TouchableOpacity>), headerTitle: `Welcome ${user?.email}`,}}>
-      <Tab.Screen name="Locations" component={LocationListScreen} />
-      <Tab.Screen name="Add Location" component={AddLocationScreen} />
-      <Tab.Screen name="Map" component={MapScreen} />
-      <Tab.Screen name="Countries" component={CountrySearchScreen} />
+        
+      <Tab.Screen name="Locations" component={LocationListScreen} options={{tabBarIcon: ({color, size }) =>
+        <Ionicons name="list-outline" size={size} color={color}/> // this is UGLY and horribly convoluted but eh it works
+      }} />
+      
+      <Tab.Screen name="Add Location" component={AddLocationScreen} options={{tabBarIcon: ({color, size }) =>
+        <Ionicons name="add-outline" size={size} color={color}/>
+      }} />
+      
+      <Tab.Screen name="Map" component={MapScreen} options={{tabBarIcon: ({color, size }) =>
+        <Ionicons name="navigate-circle-outline" size={size} color={color}/>
+      }} />
+      
+      <Tab.Screen name="Countries" component={CountrySearchScreen} options={{tabBarIcon: ({color, size }) =>
+        <Ionicons name="earth-outline" size={size} color={color}/>
+      }} />
+      
     </Tab.Navigator>
   )
 }
