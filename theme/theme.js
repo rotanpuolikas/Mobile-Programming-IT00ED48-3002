@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
     borderRadius: 12,
     marginBottom: 15,
     borderWidth: 1,
-    borderColor: "#A8DADC",
+    borderColor: colours.borderColour,
   },
   button: {
     backgroundColor: colours.primary,
@@ -29,17 +29,23 @@ export const styles = StyleSheet.create({
     alignItems: "center",
   },
   buttonText: {
-    color: colours.card,
+    color: colours.whiteText,
     fontSize: 16,
     fontWeight: "600",
   },
   card: {
-    flexDirection: "row",
+    flexDirection: "column",
     alignItems: "center",
     backgroundColor: colours.card,
     padding: 12,
     borderRadius: 12,
     marginBottom: 10,
+  },
+  cardTopRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    width: "100%",
   },
   flag: {
     width: 50,
@@ -77,7 +83,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
   },
   mapButtonText: {
-    color: colours.card,
+    color: colours.whiteText,
     fontWeight: "600",
   },
   addButton: {
@@ -88,7 +94,7 @@ export const styles = StyleSheet.create({
     marginTop: 10,
   },
   addButtonText: {
-    color: colours.card,
+    color: colours.whiteText,
     fontSize: 16,
     fontWeight: "600",
   },
@@ -104,5 +110,31 @@ export const styles = StyleSheet.create({
   },
   map: {
     flex: 1,
+  },
+  ratingStars: {
+    flex: 1,
+    flexDirection: "row",
+    marginBottom: 5,
+  },
+  ratingStarsClickable: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "center",
+    alignSelf: "flex-start",
+    position: "absolute",
+    left: 0,
+    right: 0,
+    top: 10, // half of ratingbox padding
+  },
+  ratingBox: {
+    position: "relative",
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: colours.card,
+    padding: 20,
+    borderRadius: 12,
+    marginBottom: 15,
+    borderWidth: 1,
+    borderColor: colours.borderColour,
   },
 })
