@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { View, Text, TextInput, TouchableOpacity, FlatList, Image, ActivityIndicator } from "react-native"
+import { View, Text, TextInput, TouchableOpacity, FlatList, Image, ActivityIndicator, Keyboard } from "react-native"
 
 import { styles } from "../theme/theme.js"
 import { colours } from "../theme/colours.js"
@@ -11,6 +11,7 @@ const CountrySearchScreen = () => {
   const [error, setError] = useState("")
 
   const searchCountries = async () => {
+    Keyboard.dismiss()
     if (!keyword) return
 
     setLoading(true)
@@ -59,11 +60,16 @@ const CountrySearchScreen = () => {
         <Text style={styles.buttonText}>Search</Text>
       </TouchableOpacity>
 
+      <View style={error || loading ? styles.countryMiddlePart : {}}>
+
       {loading && <ActivityIndicator size="large" color={colours.primary} />}
 
-      {error ? <Text style={styles.error}>{error}</Text> : null}
+      {error ? <View style={styles.card}><Text style={styles.error}>{error}</Text></View> : null}
+
+      </View>
 
       <FlatList
+        style={{paddingTop: 15}}
         data={countries}
         keyExtractor={(item) => item.cca3}
         renderItem={renderItem}

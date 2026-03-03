@@ -10,4 +10,5 @@ export const colours = {
   error: "#E63946",
   ratingStars: "#FFC40C",
   borderColour: "#A8DADC",
+  imgBorder: "#1D3557",
 };

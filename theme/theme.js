@@ -56,7 +56,8 @@ export const styles = StyleSheet.create({
   flag: {
     width: 50,
     height: 30,
-    marginRight: 15,
+    borderWidth: 1,
+    borderColor: colours.imgBorder, 
   },
   countryName: {
     fontSize: 16,
@@ -64,7 +65,7 @@ export const styles = StyleSheet.create({
   },
   error: {
     color: colours.error,
-    marginBottom: 10,
+    padding: 5,
   },
   name: {
     fontSize: 18,
@@ -142,5 +143,9 @@ export const styles = StyleSheet.create({
     marginBottom: 15,
     borderWidth: 1,
     borderColor: colours.borderColour,
+  },
+  countryMiddlePart: {
+    paddingTop: 15,
+    justifyContent: "center",
   },
 })
