@@ -27,6 +27,7 @@ export const AuthProvider = ({ children }) => {
   const logout = async () => {
     await signOut(auth)
     await AsyncStorage.removeItem("user")
+    await AsyncStorage.removeItem("lastLocation") // forget last location so other users don't automatically load it
     setUser(null) //null user proved to cause problems sometimes, looking for a fix
   };
 
