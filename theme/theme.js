@@ -54,4 +54,55 @@ export const styles = StyleSheet.create({
     color: colours.error,
     marginBottom: 10,
   },
+  name: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: colours.textPrimary,
+    marginBottom: 5,
+  },
+  description: {
+    fontSize: 14,
+    color: colours.textSecondary,
+    marginBottom: 5,
+  },
+  rating: {
+    fontSize: 14,
+    color: colours.primary,
+    marginBottom: 10,
+  },
+  mapButton: {
+    backgroundColor: colours.accent,
+    padding: 10,
+    borderRadius: 10,
+    alignItems: "center",
+  },
+  mapButtonText: {
+    color: colours.card,
+    fontWeight: "600",
+  },
+  addButton: {
+    backgroundColor: colours.primary,
+    padding: 15,
+    borderRadius: 12,
+    alignItems: "center",
+    marginTop: 10,
+  },
+  addButtonText: {
+    color: colours.card,
+    fontSize: 16,
+    fontWeight: "600",
+  },
+  empty: {
+    textAlign: "center",
+    marginTop: 40,
+    color: colours.textSecondary,
+  },
+  center: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  map: {
+    flex: 1,
+  },
 })
